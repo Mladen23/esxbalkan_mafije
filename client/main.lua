@@ -650,7 +650,7 @@ CreateThread(function()
 						isInMarker, currentStation, currentPart, currentPartNum = true, k, 'Vehicles', i
 					end
 				end
-
+			if PlayerData.job ~= nil and (PlayerData.job.name == 'imeposla' or PlayerData.job.name == 'imeposladrugi') then
 				for i=1, #Config.Mafije[jobName]['Helikopter'], 1 do
 					local distance = #(coords - Config.Mafije[jobName]['Helikopter'][i])
 
@@ -665,7 +665,7 @@ CreateThread(function()
 						isInMarker, currentStation, currentPart, currentPartNum = true, k, 'Helikopter', i
 					end
 				end
-
+			end
 				for i=1, #Config.Mafije[jobName]['Brodovi'], 1 do
 					local distance = #(coords - Config.Mafije[jobName]['Brodovi'][i])
 
